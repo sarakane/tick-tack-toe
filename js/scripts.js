@@ -39,7 +39,8 @@ HTMLTableDataCellElement.checkIfWinner(function) {
 };
 
 function winner () {
-  player1 
+  Player1winner = 
+  Player2Winner = 
 }
 
 function playGame() {
@@ -49,6 +50,8 @@ function playGame() {
   /* while(!gameover()) {
     wait for player whose turn it is to select open space and submit
     then switch turns
+
+    turn = swapTurn(turn);
   }
   */
 }
@@ -57,8 +60,12 @@ function playGame() {
 //   switch(Player)
 // }); 
 
-function startGame(){
-
+function swapTurn(turn) {
+  if (turn === 'X') {
+    return 'O'
+  } else {
+    return 'X'
+  }
 }
 
 function gameOver(){
