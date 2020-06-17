@@ -118,3 +118,15 @@ body {
   background-size: 1500px 1500px;
   background-repeat: no-repeat;
 }
+
+#output1 {
+  display: none;
+}
+
+#output2 {
+  display: none;
+}
+
+#output3 {
+  display: none;
+}

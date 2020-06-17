@@ -26,9 +26,7 @@
         <div class="cell" data-cell id="dataCell7"></div>
         <div class="cell" data-cell id="dataCell8"></div>
       </div>
-      <div class="win-message" id="winningMessage">
-        <button id="restartButton" onclick="document.location='index.html'">Play Again</button>
-      </div>
+      
       <div id="reset">
         <button class="resetButton" onclick="document.location='Gameboard.html'">Start Over</button>
       </div>
@@ -36,9 +34,13 @@
         <button class="submitButton">Submit</button>
       </div>
     </div>
-    <p id="output1"></p>
-    <p id="output2"></p>
-    <p id="output3"></p>
+    <div class="win-message" id="winningMessage">
+    <p id="outcome1"><img src="jpg/xIsWinner.jpg" alt="X is the Winner"></p>
+    <p id="outcome2"><img src="jpg/oIsWinner.jpg" alt="O is the Winner"></p>
+    <p id="outcome3"><img src="jpg/noWinner.jpg" alt="No one is the winner"></p>
+    <button id="restartButton" onclick="document.location='index.html'">Play Again</button>
+      </div>
+    
   </div>
 </body>
 </html>

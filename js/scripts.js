@@ -1,6 +1,6 @@
 //Business logic 
 
-HTMLTableDataCellElement.checkIfWinner(function) {
+HTMLTableDataCellElement.checkIfWinner(function() {
   let box0 = $("#dataCell0");
   let box1 = $("#dataCell1");
   let box2 = $("#dataCell2");
@@ -10,37 +10,49 @@ HTMLTableDataCellElement.checkIfWinner(function) {
   let box6 = $("#dataCell6");
   let box7 = $("#dataCell7");
   let box8 = $("#dataCell8");
-  let winner = 
+  
 
-    if (box0 != empty) && (box1 == box0) && (box2 == box1)) {
-      return Player winner
+    if ((box0 != empty) && (box1 == box0) && (box2 == box1)) {
+      return (winner);
     };
     if((box3 != empty) && (box4 == box3) && (box5 == box4)) {
-      return Player winner
+      return (winner);
     };
     if((box6 != empty) && (box7 == box6) && (box8 == box7)){
-      return Player winner
+      return (winner);
     };
     if((box0 != empty) && (box3 == box1) && (box6 == box3)){
-      return Player winner
+      return (winner);
     };
     if((box1 != empty) && (box3 == box1) && (box7 == box4)){
-      return Player winner
+      return (winner);
     };
     if((box2 != empty) && (box5 == box2) && (box8 == box5)){
-      return winner
+      return (winner);
     };
     if((box0 != empty) && (box4 == box0) && (box8 == box4)){
-      return Player winner
+      return (winner);
     };
     if((box6 != empty) && (box4 == pos[6]) && (box2 == box4)){
-      return Player winner
+      return (winner);
     };
-};
+});
 
-function winner () {
-  Player1winner = 
-  Player2Winner = 
+function winner (player) {
+  if (player1) {
+    $("#outcome1").show();
+  }
+  if (player2) {
+    $("#outcome2").show();
+  }
+  if (noPlayer) {
+    $("#outcome3").show();
+  }
+}
+
+function cellclick(e){
+  const cell = e.target;
+  
 }
 
 function playGame() {
@@ -92,9 +104,9 @@ function Game () {
 
 //User interface logic
 $(document).ready(function(){
-  $('button#startButton').submit(function(event) {
-  event.preventDefault();
-  
-  });
+  $(".cell").click(function(event) {
+    event.preventDefault();
+    
+  });  
 
 });
