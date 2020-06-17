@@ -8,7 +8,7 @@
 
 ## Description
 
-_{This is a detailed description of your application. Its purpose and usage.  Give as much detail as needed to explain what the application does, and any other information you want users or other developers to have. }_
+_This project allows two users to play a game of tic tac toe. Project is created using HTML, JavaScript, and CSS, and is meant as a challenging practice for using constructor functions and prototype functions, as well as looping and branching to check for win conditions in the introductory C#/React program of Epicodus._
 
 ## Setup/Installation Requirements
 
@@ -22,6 +22,16 @@ __
 ## Known Bugs
 
 _No known bugs_
+
+## Specs 
+
+| Behavior    | Input | Output |
+| :---------- | ----- | -----: |
+| PLayer 1 | '''click''' box | X |
+| Player 2 | '''click''' box | O |
+| Restart | (button) | --- |
+| End turn | '''button''' end turn  | player1/play2 turn  |
+
 
 ## Support and contact details
 
