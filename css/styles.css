@@ -33,19 +33,74 @@
   transform: translateY(4px);
 }
 
+.board-container {
+  background-image: url('../jpg/1.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 1200px;
+}
+
 .board {
-  width: 100vw;
-  height: 100vh;
   display: grid;
   justify-content: center;
   align-content: center;
-  background-image: url('../jpg/1.jpg');
-  background-repeat: no-repeat;
   grid-template-columns: repeat(3, auto);
 }
 
 .cell {
-  width: 100px;
-  height: 100px;
-  background-color: rgba(102, 102, 102, 0.774);
+  width: 200px;
+  height: 200px;
+  background-color: rgba(102, 102, 102, 0.226);
+}
+
+.win-message {
+  display: none;
+}
+
+.resetButton {
+  display: inline-block;
+  padding: 15px 25px;
+  font-size: 24px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: red;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+  float: left;
+}
+
+.resetButton:hover {background-color: maroon}
+
+.resetButton:active {
+  background-color: #8e3e3e;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+.submitButton {
+  display: inline-block;
+  padding: 15px 25px;
+  font-size: 24px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: blue;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+  float: right;
+}
+
+.submitButton:hover {background-color: navy}
+
+.submitButton:active {
+  background-color: #073d70;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
 }

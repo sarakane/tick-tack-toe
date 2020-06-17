@@ -32,8 +32,9 @@ _No known bugs_
 | Start Buton| intializes Game | Brings up game page |
 | Restart | 'click' | game restarts |
 | End turn | 'button' end turn  | player1/player2 turn  |
-| Player 1 gets 3 marks in a row | | Player 1 wins|
-| Player 2 gets 3 marks in a row | | Player 2 wins | 
+| Player 1 | 3 marks in a row | Player 1 wins|
+| Player 2 | 3 marks in a row | Player 2 wins | 
+| No one reaches 3 in a row | filled board no rows of 3 | no winner |
 
 
 ## Support and contact details

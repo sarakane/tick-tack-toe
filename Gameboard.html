@@ -13,22 +13,28 @@
       <h2>Tic-Tac-Toe</h2>
       <p class="titleintro">Game On</p>
     </div>
-    <div class="board container">
+    <div class="board-container">
       <div class= "board">
-        <div class="cell" data-cell></div>
-        <div class="cell" data-cell></div>
-        <div class="cell" data-cell></div>
-        <div class="cell" data-cell></div>
-        <div class="cell" data-cell></div>
-        <div class="cell" data-cell></div>
-        <div class="cell" data-cell></div>
-        <div class="cell" data-cell></div>
-        <div class="cell" data-cell></div>
+        <div class="cell" data-cell id="dataCell1"></div>
+        <div class="cell" data-cell id="dataCell2"></div>
+        <div class="cell" data-cell id="dataCell3"></div>
+        <div class="cell" data-cell id="dataCell4"></div>
+        <div class="cell" data-cell id="dataCell5"></div>
+        <div class="cell" data-cell id="dataCell6"></div>
+        <div class="cell" data-cell id="dataCell7"></div>
+        <div class="cell" data-cell id="dataCell8"></div>
+        <div class="cell" data-cell id="dataCell9"></div>
       </div>
       <div class="win-message" id="winningMessage">
-        
         <button id="restartButton" onclick="document.location='index.html'">Play Again</button>
       </div>
+      <div id="reset">
+        <button class="resetButton" onclick="document.location='Gameboard.html'">>Start Over<</button>
+      </div>
+      <div id="endTurn">
+        <button class="submitButton">>Submit<</button>
+      </div>
+    </div>
   </div>
 </body>
 </html>
