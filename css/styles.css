@@ -8,6 +8,8 @@
 
 .jumbotron {
   text-align: center;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bolder;
 }
 
 .button {
@@ -51,6 +53,10 @@
   width: 200px;
   height: 200px;
   background-color: rgba(102, 102, 102, 0.226);
+}
+
+.cell:hover {
+  background-color: rgba(102, 102, 102, 0.87);
 }
 
 .win-message {
@@ -103,4 +109,8 @@
   background-color: #073d70;
   box-shadow: 0 5px #666;
   transform: translateY(4px);
+}
+
+body {
+
 }

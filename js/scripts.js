@@ -1,31 +1,87 @@
 //Business logic 
 
 HTMLTableDataCellElement.checkIfWinner(function) {
-  if ((pos[0] != empty) && (pos[1] == pos[0]) && (pos[2] == pos[1])){
-    return winner
-  }
-  if((pos[3] != empty) && (pos[4] == pos[3]) && (pos[5] == pos[4])){
-    return winner
-  }
-  if((pos[6] != empty) && (pos[7] == pos[6]) && (pos[8] == pos[7])){
-    return winner
-  }
-  if((pos[0] != empty) && (pos[3] == pos[1]) && (pos[6] == pos[3])){
-    return winner
-  }
-  if((pos[1] != empty) && (pos[4] == pos[1]) && (pos[7] == pos[4])){
-    return winner
-  }
-  if((pos[2] != empty) && (pos[5] == pos[2]) && (pos[8] == pos[5])){
-    return winner
-  }
-  if((pos[0] != empty) && (pos[4] == pos[0]) && (pos[8] == pos[4])){
-    return winner
-  }
-  if((pos[6] != empty) && (pos[4] == pos[6]) && (pos[2] == pos[4])){
-    return winner
-  }
+  let box0 = $("#dataCell0");
+  let box1 = $("#dataCell1");
+  let box2 = $("#dataCell2");
+  let box3 = $("#dataCell3");
+  let box4 = $("#dataCell4");
+  let box5 = $("#dataCell5");
+  let box6 = $("#dataCell6");
+  let box7 = $("#dataCell7");
+  let box8 = $("#dataCell8");
+  let winner = 
+
+    if (box0 != empty) && (box1 == box0) && (box2 == box1)) {
+      return Player winner
+    };
+    if((box3 != empty) && (box4 == box3) && (box5 == box4)) {
+      return Player winner
+    };
+    if((box6 != empty) && (box7 == box6) && (box8 == box7)){
+      return Player winner
+    };
+    if((box0 != empty) && (box3 == box1) && (box6 == box3)){
+      return Player winner
+    };
+    if((box1 != empty) && (box3 == box1) && (box7 == box4)){
+      return Player winner
+    };
+    if((box2 != empty) && (box5 == box2) && (box8 == box5)){
+      return winner
+    };
+    if((box0 != empty) && (box4 == box0) && (box8 == box4)){
+      return Player winner
+    };
+    if((box6 != empty) && (box4 == pos[6]) && (box2 == box4)){
+      return Player winner
+    };
 };
+
+function winner () {
+  player1 
+}
+
+function playGame() {
+  const player1 = new Player('X');
+  const player2 = new Player('O');
+  let turn = player1;
+  /* while(!gameover()) {
+    wait for player whose turn it is to select open space and submit
+    then switch turns
+  }
+  */
+}
+
+// $("div#endTurn").submit(function nextTurn(){
+//   switch(Player)
+// }); 
+
+function startGame(){
+
+}
+
+function gameOver(){
+  //check  if board is full or player has won
+  return true;
+}
+
+//Player Business Logic
+function Player(mark) {
+  this.mark = mark;
+}
+
+Player.prototype.mark = function() {
+  return this.mark;
+}
+
+function Board () {
+  
+}
+
+function Game () {
+  
+}
 
 //User interface logic
 $(document).ready(function(){
