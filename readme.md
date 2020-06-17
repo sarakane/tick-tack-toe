@@ -27,10 +27,13 @@ _No known bugs_
 
 | Behavior    | Input | Output |
 | :---------- | ----- | -----: |
-| PLayer 1 | '''click''' box | X |
-| Player 2 | '''click''' box | O |
-| Restart | (button) | --- |
-| End turn | '''button''' end turn  | player1/play2 turn  |
+| Player 1 | 'click' box | X |
+| Player 2 | 'click' box | O |
+| Start Buton| intializes Game | Brings up game page |
+| Restart | 'click' | game restarts |
+| End turn | 'button' end turn  | player1/player2 turn  |
+| Player 1 gets 3 marks in a row | | Player 1 wins|
+| Player 2 gets 3 marks in a row | | Player 2 wins | 
 
 
 ## Support and contact details

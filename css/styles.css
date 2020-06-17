@@ -1,3 +1,15 @@
+@media Screen and (min-width: 400) and (max-width: 200) {
+
+}
+
+@media Screen and (min-width: 600) and (max-width: 6000) {
+
+}
+
+.jumbotron {
+  text-align: center;
+}
+
 .button {
   display: inline-block;
   padding: 15px 25px;
@@ -19,4 +31,21 @@
   background-color: #3e8e41;
   box-shadow: 0 5px #666;
   transform: translateY(4px);
+}
+
+.board {
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  background-image: url('../jpg/1.jpg');
+  background-repeat: no-repeat;
+  grid-template-columns: repeat(3, auto);
+}
+
+.cell {
+  width: 100px;
+  height: 100px;
+  background-color: rgba(102, 102, 102, 0.774);
 }
