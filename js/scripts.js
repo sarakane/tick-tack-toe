@@ -109,6 +109,11 @@ Player.prototype.mark = function() {
   return this.mark;
 }
 
+function Board () {
+  const X = "\jpg\1.jpg"
+  const O = "\jpg\o.png"
+}
+
 //User interface logic
 $(document).ready(function(){
   // attachContactListeners(cellclick)
@@ -117,3 +122,9 @@ $(document).ready(function(){
   });  
 
 });
+
+
+
+// function Player () {
+  // const player = 
+// }
