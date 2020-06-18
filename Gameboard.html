@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
   <link href="css/styles.css" rel="stylesheet" type="text/css">
   <script src="js/jquery.js"></script>
@@ -68,15 +69,16 @@
           </td> 
         </tr> 
       </table> 
+      <input type="button" class="reset btn btn-lg btn-default btn-block" value="RESET" onclick="document.location='Gameboard.html'"> 
     </div>
   </div>
   <div class="win-message" id="winningMessage">
-      <p id="outcome1"><img src="jpg/xIsWinner.jpg" alt="X is the Winner"></p>
-      <p id="outcome2"><img src="jpg/oIsWinner.jpg" alt="O is the Winner"></p>
-      <p id="outcome3"><img src="jpg/noWinner.jpg" alt="No one is the winner"></p>
+      <p id="outcome1">X is the Winner!<br><img src="https://media1.tenor.com/images/166a440d007746a995016ae88231271f/tenor.gif?itemid=8264539" alt="X is the Winner"></p>
+      <p id="outcome2">O is the Winner!<br><img src="https://i0.wp.com/equity.guru/wp-content/uploads/2019/06/winner.gif?ssl=1" alt="O is the Winner"></p>
+      <p id="outcome3">No one wins!<br><img src="http://gificiency.com/m/angry-ronswanson2.gif" alt="No one is the winner"></p>
       <button id="restartButton" onclick="document.location='index.html'">Play Again</button>
     </div>
-  <input type="button" class="reset btn btn-lg btn-default btn-block" value="RESET" onclick="document.location='Gameboard.html'"> 
+  
 </body>
 </html>
 
