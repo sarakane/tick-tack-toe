@@ -109,16 +109,13 @@ Player.prototype.mark = function() {
   return this.mark;
 }
 
-function Board () {
-  const X = "\jpg\1.jpg"
-  const O = "\jpg\o.png"
-}
 
 //User interface logic
 $(document).ready(function(){
   // attachContactListeners(cellclick)
-  $(".cell").click(function(event) {
+  $("button.dataCell").click(function(event) {
     console.log(event.target);
+    $(".xGif").show();
   });  
 
 });
