@@ -1,87 +1,88 @@
 //Business logic 
+function checkIfWinner1() {
+  if ($("#dataCell0").hasClass("markedX") &&  $("#dataCell1").hasClass("markedX") && $("#dataCell2").hasClass("markedX")) {
+    return true;
+  } else if ($("#dataCell3").hasClass("markedX") &&  $("#dataCell4").hasClass("markedX") && $("#dataCell5").hasClass("markedX")) {
+    return true;
+  } else if($("#dataCell6").hasClass("markedX") &&  $("#dataCell7").hasClass("markedX") && $("#dataCell8").hasClass("markedX")){
+    return true;
+  } else if($("#dataCell0").hasClass("markedX") &&  $("#dataCell3").hasClass("markedX") && $("#dataCell6").hasClass("markedX")){
+    return true;
+  } else if($("#dataCell1").hasClass("markedX") &&  $("#dataCell3").hasClass("markedX") && $("#dataCell7").hasClass("markedX")){
+    return true;
+  } else if($("#dataCell2").hasClass("markedX") &&  $("#dataCell5").hasClass("markedX") && $("#dataCell8").hasClass("markedX")){
+    return true;
+  } else if($("#dataCell0").hasClass("markedX") &&  $("#dataCell4").hasClass("markedX") && $("#dataCell8").hasClass("markedX")){
+    return true;
+  } else if($("#dataCell6").hasClass("markedX") &&  $("#dataCell4").hasClass("markedX") && $("#dataCell2").hasClass("markedX")){
+    return true;
+//else if($("#dataCell0").hasClass(marked) &&  $("#dataCell1").hasClass(marked) && $("#dataCell2").hasClass(marked) && $("#dataCell3").hasClass(marked) &&  $("#dataCell4").hasClass(marked) && $("#dataCell5").hasClass(marked) && $("#dataCell6").hasClass(marked) &&  $("#dataCell7").hasClass(marked) && $("#dataCell8").hasClass(marked)){
+    //return ("#outcome3");
+  } else {
+    return false;
+  }
+}
 
-// HTMLTableDataCellElement.checkIfWinner(function() {
-//   let box0 = $("#dataCell0");
-//   let box1 = $("#dataCell1");
-//   let box2 = $("#dataCell2");
-//   let box3 = $("#dataCell3");
-//   let box4 = $("#dataCell4");
-//   let box5 = $("#dataCell5");
-//   let box6 = $("#dataCell6");
-//   let box7 = $("#dataCell7");
-//   let box8 = $("#dataCell8");
-  
+function checkIfWinner2() {
+  if ($("#dataCell0").hasClass("markedO") &&  $("#dataCell1").hasClass("markedO") && $("#dataCell2").hasClass("markedO")) {
+    return true;
+  } else if ($("#dataCell3").hasClass("markedO") &&  $("#dataCell4").hasClass("markedO") && $("#dataCell5").hasClass("markedO")) {
+    return true;
+  } else if($("#dataCell6").hasClass("markedO") &&  $("#dataCell7").hasClass("markedO") && $("#dataCell8").hasClass("markedO")){
+    return true;
+  } else if($("#dataCell0").hasClass("markedO") &&  $("#dataCell3").hasClass("markedO") && $("#dataCell6").hasClass("markedO")){
+    return true;
+  } else if($("#dataCell1").hasClass("markedO") &&  $("#dataCell3").hasClass("markedO") && $("#dataCell7").hasClass("markedO")){
+    return true;
+  } else if($("#dataCell2").hasClass("markedO") &&  $("#dataCell5").hasClass("markedO") && $("#dataCell8").hasClass("markedO")){
+    return true;
+  } else if($("#dataCell0").hasClass("markedO") &&  $("#dataCell4").hasClass("markedO") && $("#dataCell8").hasClass("markedO")){
+    return true;
+  } else if($("#dataCell6").hasClass("markedO") &&  $("#dataCell4").hasClass("markedO") && $("#dataCell2").hasClass("markedO")){
+    return true;
+//else 
+  } else {
+    return false;
+  }
+}
 
-//     if ((box0 != empty) && (box1 == box0) && (box2 == box1)) {
-//       return (winner);
-//     };
-//     if((box3 != empty) && (box4 == box3) && (box5 == box4)) {
-//       return (winner);
-//     };
-//     if((box6 != empty) && (box7 == box6) && (box8 == box7)){
-//       return (winner);
-//     };
-//     if((box0 != empty) && (box3 == box1) && (box6 == box3)){
-//       return (winner);
-//     };
-//     if((box1 != empty) && (box3 == box1) && (box7 == box4)){
-//       return (winner);
-//     };
-//     if((box2 != empty) && (box5 == box2) && (box8 == box5)){
-//       return (winner);
-//     };
-//     if((box0 != empty) && (box4 == box0) && (box8 == box4)){
-//       return (winner);
-//     };
-//     if((box6 != empty) && (box4 == pos[6]) && (box2 == box4)){
-//       return (winner);
-//     };
-// });
+function checkIfTie() {
+/*   if($("#dataCell0").hasClass("markedX") &&  $("#dataCell1").hasClass("markedX") && $("#dataCell2").hasClass("markedX") && $("#dataCell3").hasClass("markedX") &&  $("#dataCell4").hasClass("markedX") && $("#dataCell5").hasClass("markedX") && $("#dataCell6").hasClass("markedX") &&  $("#dataCell7").hasClass("markedX") && $("#dataCell8").hasClass("markedX")){
+    return true;
+  }
+  else if ($("#dataCell0").hasClass("markedO") &&  $("#dataCell").hasClass("markedO") && $("#dataCell2").hasClass("markedO") && $("#dataCell3").hasClass("markedO") &&  $("#dataCell4").hasClass("markedO") && $("#dataCell5").hasClass("markedO") && $("#dataCell6").hasClass("markedO") &&  $("#dataCell7").hasClass("markedO") && $("#dataCell8").hasClass("markedO")) {
+    return true;
+  } else {
+    return false;
+  } */
+  if($("#dataCell0").hasClass("marked") &&  $("#dataCell1").hasClass("marked") && $("#dataCell2").hasClass("marked") && $("#dataCell3").hasClass("marked") &&  $("#dataCell4").hasClass("marked") && $("#dataCell5").hasClass("marked") && $("#dataCell6").hasClass("marked") &&  $("#dataCell7").hasClass("marked") && $("#dataCell8").hasClass("marked")){
+    return true;
+  }else {
+    return false;
+  }
+}
 
-function winner (player) {
-  if (player1) {
+
+function winner(player) {
+  if (player === "player1") {
+    $(".container").hide();
+    $(".win-message").show();
     $("#outcome1").show();
+    return true;
   }
-  if (player2) {
+  if (player === "player2") {
+    $(".container").hide();
+    $(".win-message").show();
     $("#outcome2").show();
-  }
-  if (noPlayer) {
-    $("#outcome3").show();
+    return true;
   }
 }
 
+  
+  
+  //if (noPlayer) {
+    //$("#outcome3").show();
 
-const X_Class = "X"
-const O_Class = "O"
-const cellElements = document.querySelectorAll('[data-cell]');
-let circleTurn
-
-cellElements.forEach(cell => {
-  cell.addEventListener('click', cellclick, {once: true})
-  console.log("cell clicked");
-})
-
-function cellclick(e){
-  const cell = e.target;
-  const currentClass = circleTurn ? O_Class : XO_Class
-  placeMark(cell, currentClass)
-  swapTurn()
-}
-
-
-
-function playGame() {
-  const player1 = new Player('X');
-  const player2 = new Player('O');
-  let turn = player1;
-  /* while(!gameover()) {
-    wait for player whose turn it is to select open space and submit
-    then switch turns
-
-    turn = swapTurn(turn);
-  }
-  */
-}
 
 // $("div#endTurn").submit(function nextTurn(){
 //   switch(Player)
@@ -92,12 +93,7 @@ function swapTurn(turn) {
   //   return 'O'
   // } else {
   //   return 'X'
-  circleTurn = !circleTurn
-}
-
-function gameOver(){
-  //check  if board is full or player has won
-  return true;
+  return turn = !turn;
 }
 
 //Player Business Logic
@@ -109,11 +105,46 @@ Player.prototype.mark = function() {
   return this.mark;
 }
 
+let xTurn = true;
 //User interface logic
 $(document).ready(function(){
-  // attachContactListeners(cellclick)
-  $(".cell").click(function(event) {
-    console.log(event.target);
+$("#player2Turn").hide();
+  //attachEventListeners(cellclick)
+  $("button").on("click", function(event) {
+    //event.preventDefault();
+    let id = event.target.getAttribute("id");
+    let player1 = 'X'
+    let player2 = 'O'
+    if (xTurn) {
+      $("#"+id).addClass("marked markedX");
+      $("#"+id+" .xGif").show();
+      $("#player1Turn").hide();
+      $("#player2Turn").show();
+      if(checkIfTie()) {
+        $(".container").hide();
+        $(".win-message").show();
+        $("#outcome3").show();
+      }
+      if (checkIfWinner1()) {
+        winner("player1");
+      }
+      xTurn = swapTurn(xTurn);
+    } else {
+      $("#"+id).addClass("marked markedO");
+      $("#"+id+" .oGif").show();
+      $("#player2Turn").hide();
+      $("#player1Turn").show();
+      if(checkIfTie()) {
+        $(".container").hide();
+        $(".win-message").show();
+        $("#outcome3").show();
+      }
+      if (checkIfWinner2()) {
+        winner("player2")
+      }
+      xTurn = swapTurn(xTurn);
+    }
+
   });  
 
 });

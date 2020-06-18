@@ -1,9 +1,17 @@
-@media Screen and (min-width: 400) and (max-width: 200) {
-
+@media Screen and (max-width: 2560px) {
+  body {
+    background-image: url(https://cmkt-image-prd.freetls.fastly.net/0.1.0/ps/8135136/600/400/m1/fpnw/wm0/prev-01-.jpg?1586871870&s=b7f50d6872e3cebfba5b31549d5f5e23);
+    background-size: 2560px 1600px;
+    background-repeat: no-repeat;
+  }
 }
 
-@media Screen and (min-width: 600) and (max-width: 6000) {
-
+@media Screen and  (max-width: 1920px) {
+  body {
+    background-image: url(https://cmkt-image-prd.freetls.fastly.net/0.1.0/ps/8135136/600/400/m1/fpnw/wm0/prev-01-.jpg?1586871870&s=b7f50d6872e3cebfba5b31549d5f5e23);
+    background-size: 1920px 1280px;
+    background-repeat: no-repeat;
+  }
 }
 
 .jumbotron {
@@ -37,56 +45,12 @@
   transform: translateY(4px);
 }
 
-.board-container {
-  background-image: url('../jpg/1.jpg');
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 1200px;
-}
-
-.board {
-  display: grid;
-  justify-content: center;
-  align-content: center;
-  grid-template-columns: repeat(3, auto);
-}
-
-.cell {
-  width: 200px;
-  height: 200px;
-  background-color: rgba(102, 102, 102, 0.226);
-}
-
-.cell:hover {
-  background-color: rgba(102, 102, 102, 0.87);
-}
-
 .win-message {
   display: none;
-}
-
-.resetButton {
-  display: inline-block;
-  padding: 15px 25px;
-  font-size: 24px;
-  cursor: pointer;
+  align-content: center;
   text-align: center;
-  text-decoration: none;
-  outline: none;
-  color: #fff;
-  background-color: red;
-  border: none;
-  border-radius: 15px;
-  box-shadow: 0 9px #999;
-  float: left;
-}
-
-.resetButton:hover {background-color: maroon}
-
-.resetButton:active {
-  background-color: #8e3e3e;
-  box-shadow: 0 5px #666;
-  transform: translateY(4px);
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .submitButton {
@@ -102,31 +66,90 @@
   border: none;
   border-radius: 15px;
   box-shadow: 0 9px #999;
-  float: right;
 }
 
-.submitButton:hover {background-color: navy}
+#outcome1 {
+  display: none;
+  align-content: center;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 20em;
+  color: white;
+}
 
-.submitButton:active {
-  background-color: #073d70;
+#outcome2 {
+  display: none;
+  align-content: center;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 20em;
+  color: white;
+}
+
+#outcome3 {
+  display: none;
+  align-content: center;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 20em;
+  color: white;
+}
+
+table {
+  align-content: center;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.dataCell {
+  height: 150px;
+  width: 150px;
+  margin: 5px;
+  padding: 5px;
+  background-color: transparent;
+  border: white 3px;
+  border-style: inset;
+}
+
+.dataCell:hover {
+  background-color: rgba(250, 250, 250, 0.1);
+}
+
+.xGif {
+  height: 135px;
+  width: 135px;
+  display: none;
+}
+
+.oGif {
+  height: 135px;
+  width: 135px;
+  display: none;
+}
+
+#restartButton {
+  display: inline-block;
+  padding: 15px 25px;
+  font-size: 24px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #4CAF50;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+}
+
+#restartButton:hover {background-color: #3e8e41}
+
+#restartButton:active {
+  background-color: #3e8e41;
   box-shadow: 0 5px #666;
   transform: translateY(4px);
-}
-
-body {
-  background-image: url(https://cmkt-image-prd.freetls.fastly.net/0.1.0/ps/8135136/600/400/m1/fpnw/wm0/prev-01-.jpg?1586871870&s=b7f50d6872e3cebfba5b31549d5f5e23);
-  background-size: 1980px 1200px;
-  background-repeat: no-repeat;
-}
-
-#output1 {
-  display: none;
-}
-
-#output2 {
-  display: none;
-}
-
-#output3 {
-  display: none;
 }
