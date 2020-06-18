@@ -37,30 +37,6 @@
   transform: translateY(4px);
 }
 
-.board-container {
-  background-image: url('../jpg/1.jpg');
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 1200px;
-}
-
-.board {
-  display: grid;
-  justify-content: center;
-  align-content: center;
-  grid-template-columns: repeat(3, auto);
-}
-
-/* .cell {
-  width: 200px;
-  height: 200px;
-  background-color: rgba(102, 102, 102, 0.226);
-}
-
-.cell:hover {
-  background-color: rgba(102, 102, 102, 0.87);
-} */
-
 .win-message {
   display: none;
 }
@@ -145,6 +121,10 @@ table {
   background-color: transparent;
   border: white 3px;
   border-style: inset;
+}
+
+.dataCell:hover {
+  background-color: rgba(250, 250, 250, 0.1);
 }
 
 .xGif {

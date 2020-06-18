@@ -50,39 +50,6 @@ function winner (player) {
   }
 }
 
-
-const X_Class = "X"
-const O_Class = "O"
-const cellElements = document.querySelectorAll('[data-cell]');
-let circleTurn
-
-cellElements.forEach(cell => {
-  cell.addEventListener('click', cellclick, {once: true})
-  console.log("cell clicked");
-})
-
-function cellclick(e){
-  const cell = e.target;
-  const currentClass = circleTurn ? O_Class : XO_Class
-  placeMark(cell, currentClass)
-  swapTurn()
-}
-
-
-
-function playGame() {
-  const player1 = new Player('X');
-  const player2 = new Player('O');
-  let turn = player1;
-  /* while(!gameover()) {
-    wait for player whose turn it is to select open space and submit
-    then switch turns
-
-    turn = swapTurn(turn);
-  }
-  */
-}
-
 // $("div#endTurn").submit(function nextTurn(){
 //   switch(Player)
 // }); 
@@ -92,12 +59,7 @@ function swapTurn(turn) {
   //   return 'O'
   // } else {
   //   return 'X'
-  circleTurn = !circleTurn
-}
-
-function gameOver(){
-  //check  if board is full or player has won
-  return true;
+  turn = !turn
 }
 
 //Player Business Logic
@@ -112,15 +74,14 @@ Player.prototype.mark = function() {
 
 //User interface logic
 $(document).ready(function(){
-  // attachContactListeners(cellclick)
-  $("button.dataCell").click(function(event) {
-    console.log(event.target);
-    $(".xGif").show();
+  //attachEventListeners(cellclick)
+  $("button").on("click", function(event) {
+    let id = event.target.getAttribute("id");
+    $(id + ":xGif").show();
+    $(id + ":oGif").show();
   });  
 
 });
-
-
 
 // function Player () {
   // const player = 
