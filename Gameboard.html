@@ -16,7 +16,7 @@
       <span id="player1Turn">Player 1's Turn</span>
       <span id="player2Turn">Player 2's Turn</span>
     </div> 
-      <table> 
+      <table id="gameboard"> 
         <tr> 
           <td colspan="3"> 
         </tr> 
@@ -68,17 +68,15 @@
           </td> 
         </tr> 
       </table> 
-      <br> 
-      <br>
-      <input type="button" class="reset btn btn-lg btn-default btn-block" value="RESET" onclick="document.location='Gameboard.html'"> 
     </div>
-    <div class="win-message" id="winningMessage">
-    <p id="outcome1"><img src="jpg/xIsWinner.jpg" alt="X is the Winner"></p>
-    <p id="outcome2"><img src="jpg/oIsWinner.jpg" alt="O is the Winner"></p>
-    <p id="outcome3"><img src="jpg/noWinner.jpg" alt="No one is the winner"></p>
-    <button id="restartButton" onclick="document.location='index.html'">Play Again</button>
-      </div>
   </div>
+  <div class="win-message" id="winningMessage">
+      <p id="outcome1"><img src="jpg/xIsWinner.jpg" alt="X is the Winner"></p>
+      <p id="outcome2"><img src="jpg/oIsWinner.jpg" alt="O is the Winner"></p>
+      <p id="outcome3"><img src="jpg/noWinner.jpg" alt="No one is the winner"></p>
+      <button id="restartButton" onclick="document.location='index.html'">Play Again</button>
+    </div>
+  <input type="button" class="reset btn btn-lg btn-default btn-block" value="RESET" onclick="document.location='Gameboard.html'"> 
 </body>
 </html>
 

@@ -6,8 +6,12 @@
   }
 }
 
-@media Screen and  (max-width{
-
+@media Screen and  (max-width: 1920px) {
+  body {
+    background-image: url(https://cmkt-image-prd.freetls.fastly.net/0.1.0/ps/8135136/600/400/m1/fpnw/wm0/prev-01-.jpg?1586871870&s=b7f50d6872e3cebfba5b31549d5f5e23);
+    background-size: 1920px 1280px;
+    background-repeat: no-repeat;
+  }
 }
 
 .jumbotron {
@@ -43,29 +47,10 @@
 
 .win-message {
   display: none;
-}
-
-.resetButton {
-  display: inline-block;
-  padding: 15px 25px;
-  font-size: 24px;
-  cursor: pointer;
+  align-content: center;
   text-align: center;
-  text-decoration: none;
-  outline: none;
-  color: #fff;
-  background-color: red;
-  border: none;
-  border-radius: 15px;
-  box-shadow: 0 9px #999;
-}
-
-.resetButton:hover {background-color: maroon}
-
-.resetButton:active {
-  background-color: #8e3e3e;
-  box-shadow: 0 5px #666;
-  transform: translateY(4px);
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .submitButton {
@@ -83,28 +68,31 @@
   box-shadow: 0 9px #999;
 }
 
-.submitButton:hover {background-color: navy}
-
-.submitButton:active {
-  background-color: #073d70;
-  box-shadow: 0 5px #666;
-  transform: translateY(4px);
+#outcome11 {
+  display: none;
+  align-content: center;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-#output1 {
+#outcome2 {
   display: none;
+  align-content: center;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-#output2 {
+#outcome3 {
   display: none;
-}
-
-#output3 {
-  display: none;
+  align-content: center;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 table {
-  /* background-color: gray; */
   align-content: center;
   text-align: center;
   margin-left: auto;

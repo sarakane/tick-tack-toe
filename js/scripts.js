@@ -1,36 +1,49 @@
 //Business logic 
-
 function checkIfWinner() {
-  if ($("#dataCell0").hasClass(image) &&  $("#dataCell1").hasClass(image) && $("#dataCell2").hasClass(image)) {
-    return true(winner);
-  } else if ($("#dataCell3").hasClass(image) &&  $("#dataCell4").hasClass(image) && $("#dataCell5").hasClass(image)) {
-    return true(winner);
-  } else if($("#dataCell6").hasClass(image) &&  $("#dataCell7").hasClass(image) && $("#dataCell8").hasClass(image)){
-    return true(winner);
-  } else if($("#dataCell0").hasClass(image) &&  $("#dataCell3").hasClass(image) && $("#dataCell6").hasClass(image)){
-    return true(winner);
-  } else if($("#dataCell1").hasClass(image) &&  $("#dataCell3").hasClass(image) && $("#dataCell7").hasClass(image)){
-    return true(winner);
-  } else if($("#dataCell2").hasClass(image) &&  $("#dataCell5").hasClass(image) && $("#dataCell8").hasClass(image)){
-    return true(winner);
-  } else if($("#dataCell0").hasClass(image) &&  $("#dataCell4").hasClass(image) && $("#dataCell8").hasClass(image)){
-    return true(winner);
-  } else if($("#dataCell6").hasClass(image) &&  $("#dataCell4").hasClass(image) && $("#dataCell2").hasClass(image)){
-    return true(winner);
-  } else return false
+  if ($("#dataCell0").hasClass("marked") &&  $("#dataCell1").hasClass("marked") && $("#dataCell2").hasClass("marked")) {
+    return true;
+  } else if ($("#dataCell3").hasClass("marked") &&  $("#dataCell4").hasClass("marked") && $("#dataCell5").hasClass("marked")) {
+    return true;
+  } else if($("#dataCell6").hasClass("marked") &&  $("#dataCell7").hasClass("marked") && $("#dataCell8").hasClass("marked")){
+    return true;
+  } else if($("#dataCell0").hasClass("marked") &&  $("#dataCell3").hasClass("marked") && $("#dataCell6").hasClass("marked")){
+    return true;
+  } else if($("#dataCell1").hasClass("marked") &&  $("#dataCell3").hasClass("marked") && $("#dataCell7").hasClass("marked")){
+    return true;
+  } else if($("#dataCell2").hasClass("marked") &&  $("#dataCell5").hasClass("marked") && $("#dataCell8").hasClass("marked")){
+    return true;
+  } else if($("#dataCell0").hasClass("marked") &&  $("#dataCell4").hasClass("marked") && $("#dataCell8").hasClass("marked")){
+    return true;
+  } else if($("#dataCell6").hasClass("marked") &&  $("#dataCell4").hasClass("marked") && $("#dataCell2").hasClass("marked")){
+    return true;
+//else if($("#dataCell0").hasClass(marked) &&  $("#dataCell1").hasClass(marked) && $("#dataCell2").hasClass(marked) && $("#dataCell3").hasClass(marked) &&  $("#dataCell4").hasClass(marked) && $("#dataCell5").hasClass(marked) && $("#dataCell6").hasClass(marked) &&  $("#dataCell7").hasClass(marked) && $("#dataCell8").hasClass(marked)){
+    //return ("#outcome3");
+  } else {
+    return false;
+  }
 }
 
-function winner (player) {
-  if (player1) {
+
+function winner(player) {
+  if (player === "player1") {
+    $(".container").hide();
+    $(".win-message").show();
     $("#outcome1").show();
+    return true;
   }
-  if (player2) {
+  if (player === "player2") {
+    $(".container").hide();
+    $(".win-message").show();
     $("#outcome2").show();
-  }
-  if (noPlayer) {
-    $("#outcome3").show();
+    return true;
   }
 }
+
+  
+  
+  //if (noPlayer) {
+    //$("#outcome3").show();
+
 
 // $("div#endTurn").submit(function nextTurn(){
 //   switch(Player)
@@ -64,25 +77,25 @@ $("#player2Turn").hide();
     let player1 = 'X'
     let player2 = 'O'
     if (xTurn) {
+      $("#"+id).addClass("marked");
       $("#"+id+" .xGif").show();
       $("#player1Turn").hide();
       $("#player2Turn").show();
-      //checkIfWinner(player1)
-      swapTurn(oTurn);
+      if (checkIfWinner()) {
+        winner("player1");
+      }
+      xTurn = swapTurn(xTurn);
     } else {
+      
       $("#"+id+" .oGif").show();
       $("#player2Turn").hide();
       $("#player1Turn").show();
-      //checkIfWinner(player2)
+      if (checkIfWinner()) {
+        winner("player2")
+      }
       xTurn = swapTurn(xTurn);
     }
-    checkIfWinner(function() {
-      
-    });
+
   });  
 
 });
-
-// function Player () {
-  // const player = 
-// }
